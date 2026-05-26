@@ -1,0 +1,834 @@
+{
+  "ids": {
+    "users": 2,
+    "contacts": 8,
+    "tags": 38,
+    "consent_logs": 8,
+    "requests": 6,
+    "loyalty_accounts": 5,
+    "loyalty_transactions": 1,
+    "offers": 4
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Administrateur La Résidence",
+      "email": "admin@laresidence.mg",
+      "password_hash": "$2a$10$giF7ZzGMpc.UfoWzdqexh.6O5isp/aFRC5T2LjL/G0HnHxsxQA942",
+      "role": "administrateur",
+      "created_at": "2026-05-07T18:09:31.443Z"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "nom_prenom": "Test Voisin",
+      "whatsapp": "0340000001",
+      "email": "",
+      "quartier_ou_lieu_travail": "Ankerana",
+      "type_contact": "habitant du quartier",
+      "tranche_age": "45–54 ans",
+      "situation_professionnelle": "Salarié(e)",
+      "habitudes_sortie": "Environ deux fois par mois",
+      "suggestion": "",
+      "source_formulaire": "bons-voisins",
+      "campagne": "",
+      "sources_json": [
+        {
+          "source_formulaire": "bons-voisins",
+          "campagne": "",
+          "type_demande": "",
+          "date_creation": "2026-05-07T18:29:16.959Z"
+        }
+      ],
+      "date_inscription": "2026-05-07T18:29:16.959Z",
+      "consentement_actif": 1,
+      "date_consentement": "2026-05-07T18:29:16.959Z",
+      "texte_consentement_accepte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "statut": "actif",
+      "date_desinscription": "",
+      "mode_desinscription": "",
+      "notes_internes": "",
+      "offre_bienvenue_disponible": 1,
+      "offre_bienvenue_utilisee": 0,
+      "date_utilisation_offre": "",
+      "employe_validation": "",
+      "note_offre": "",
+      "created_at": "2026-05-07T18:29:16.959Z",
+      "updated_at": "2026-05-07T18:29:16.959Z",
+      "telephone_principal": "",
+      "canal_reponse_prefere": "",
+      "consentement_whatsapp": 1,
+      "consentement_email": 0,
+      "consentement_sms": 0,
+      "statut_contact": "actif"
+    },
+    {
+      "id": 2,
+      "nom_prenom": "Test Fidélité",
+      "whatsapp": "0340000002",
+      "email": "",
+      "quartier_ou_lieu_travail": "Ivandry",
+      "type_contact": "",
+      "tranche_age": "25–34 ans",
+      "situation_professionnelle": "Salarié(e)",
+      "habitudes_sortie": "Environ une fois par mois",
+      "suggestion": "bof",
+      "source_formulaire": "fidelite",
+      "campagne": "",
+      "sources_json": [
+        {
+          "source_formulaire": "fidelite",
+          "campagne": "",
+          "type_demande": "",
+          "date_creation": "2026-05-07T18:31:22.665Z"
+        }
+      ],
+      "date_inscription": "2026-05-07T18:31:22.665Z",
+      "consentement_actif": 1,
+      "date_consentement": "2026-05-07T18:31:22.665Z",
+      "texte_consentement_accepte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "statut": "actif",
+      "date_desinscription": "",
+      "mode_desinscription": "",
+      "notes_internes": "",
+      "offre_bienvenue_disponible": 0,
+      "offre_bienvenue_utilisee": 0,
+      "date_utilisation_offre": "",
+      "employe_validation": "",
+      "note_offre": "",
+      "created_at": "2026-05-07T18:31:22.665Z",
+      "updated_at": "2026-05-07T18:31:22.665Z",
+      "telephone_principal": "",
+      "canal_reponse_prefere": "",
+      "consentement_whatsapp": 1,
+      "consentement_email": 0,
+      "consentement_sms": 0,
+      "statut_contact": "actif"
+    },
+    {
+      "id": 3,
+      "nom_prenom": "TEST BRUNCH",
+      "whatsapp": "0340000003",
+      "email": "",
+      "quartier_ou_lieu_travail": "",
+      "type_contact": "",
+      "tranche_age": "",
+      "situation_professionnelle": "",
+      "habitudes_sortie": "",
+      "suggestion": "",
+      "source_formulaire": "demande",
+      "campagne": "",
+      "sources_json": [
+        {
+          "source_formulaire": "demande",
+          "campagne": "",
+          "type_demande": "brunch",
+          "date_creation": "2026-05-07T18:33:17.155Z"
+        },
+        {
+          "source_formulaire": "demande",
+          "campagne": "",
+          "type_demande": "brunch",
+          "date_creation": "2026-05-07T18:39:20.269Z"
+        },
+        {
+          "source_formulaire": "demande",
+          "campagne": "",
+          "type_demande": "brunch",
+          "date_creation": "2026-05-07T18:51:35.524Z"
+        }
+      ],
+      "date_inscription": "2026-05-07T18:33:17.155Z",
+      "consentement_actif": 1,
+      "date_consentement": "2026-05-07T18:51:35.524Z",
+      "texte_consentement_accepte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "statut": "actif",
+      "date_desinscription": "",
+      "mode_desinscription": "",
+      "notes_internes": "",
+      "offre_bienvenue_disponible": 1,
+      "offre_bienvenue_utilisee": 0,
+      "date_utilisation_offre": "",
+      "employe_validation": "",
+      "note_offre": "",
+      "created_at": "2026-05-07T18:33:17.155Z",
+      "updated_at": "2026-05-07T18:51:35.524Z",
+      "telephone_principal": "",
+      "canal_reponse_prefere": "",
+      "consentement_whatsapp": 1,
+      "consentement_email": 0,
+      "consentement_sms": 0,
+      "statut_contact": "actif"
+    },
+    {
+      "id": 4,
+      "nom_prenom": "TEST PISCINE",
+      "whatsapp": "0340000004",
+      "email": "",
+      "quartier_ou_lieu_travail": "",
+      "type_contact": "",
+      "tranche_age": "",
+      "situation_professionnelle": "",
+      "habitudes_sortie": "",
+      "suggestion": "",
+      "source_formulaire": "demande",
+      "campagne": "",
+      "sources_json": [
+        {
+          "source_formulaire": "demande",
+          "campagne": "",
+          "type_demande": "piscine",
+          "date_creation": "2026-05-07T18:53:14.253Z"
+        }
+      ],
+      "date_inscription": "2026-05-07T18:53:14.253Z",
+      "consentement_actif": 1,
+      "date_consentement": "2026-05-07T18:53:14.253Z",
+      "texte_consentement_accepte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "statut": "actif",
+      "date_desinscription": "",
+      "mode_desinscription": "",
+      "notes_internes": "",
+      "offre_bienvenue_disponible": 1,
+      "offre_bienvenue_utilisee": 0,
+      "date_utilisation_offre": "",
+      "employe_validation": "",
+      "note_offre": "",
+      "created_at": "2026-05-07T18:53:14.253Z",
+      "updated_at": "2026-05-07T18:53:14.253Z",
+      "telephone_principal": "",
+      "canal_reponse_prefere": "",
+      "consentement_whatsapp": 1,
+      "consentement_email": 0,
+      "consentement_sms": 0,
+      "statut_contact": "actif"
+    },
+    {
+      "id": 5,
+      "nom_prenom": "test anniversaire",
+      "whatsapp": "0340000005",
+      "email": "",
+      "quartier_ou_lieu_travail": "",
+      "type_contact": "",
+      "tranche_age": "",
+      "situation_professionnelle": "",
+      "habitudes_sortie": "",
+      "suggestion": "",
+      "source_formulaire": "demande",
+      "campagne": "",
+      "sources_json": [
+        {
+          "source_formulaire": "demande",
+          "campagne": "",
+          "type_demande": "anniversaire",
+          "date_creation": "2026-05-07T18:54:22.929Z"
+        }
+      ],
+      "date_inscription": "2026-05-07T18:54:22.929Z",
+      "consentement_actif": 1,
+      "date_consentement": "2026-05-07T18:54:22.929Z",
+      "texte_consentement_accepte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "statut": "actif",
+      "date_desinscription": "",
+      "mode_desinscription": "",
+      "notes_internes": "",
+      "offre_bienvenue_disponible": 0,
+      "offre_bienvenue_utilisee": 0,
+      "date_utilisation_offre": "",
+      "employe_validation": "",
+      "note_offre": "",
+      "created_at": "2026-05-07T18:54:22.929Z",
+      "updated_at": "2026-05-07T18:54:22.929Z",
+      "telephone_principal": "",
+      "canal_reponse_prefere": "",
+      "consentement_whatsapp": 1,
+      "consentement_email": 0,
+      "consentement_sms": 0,
+      "statut_contact": "actif"
+    },
+    {
+      "id": 6,
+      "nom_prenom": "mfjs",
+      "whatsapp": "0000",
+      "email": "",
+      "quartier_ou_lieu_travail": "",
+      "type_contact": "",
+      "tranche_age": "",
+      "situation_professionnelle": "",
+      "habitudes_sortie": "",
+      "suggestion": "",
+      "source_formulaire": "demande",
+      "campagne": "",
+      "sources_json": [
+        {
+          "source_formulaire": "demande",
+          "campagne": "",
+          "type_demande": "brunch",
+          "date_creation": "2026-05-07T18:56:20.817Z"
+        }
+      ],
+      "date_inscription": "2026-05-07T18:56:20.817Z",
+      "consentement_actif": 1,
+      "date_consentement": "2026-05-07T18:56:20.817Z",
+      "texte_consentement_accepte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "statut": "actif",
+      "date_desinscription": "",
+      "mode_desinscription": "",
+      "notes_internes": "",
+      "offre_bienvenue_disponible": 1,
+      "offre_bienvenue_utilisee": 0,
+      "date_utilisation_offre": "",
+      "employe_validation": "",
+      "note_offre": "",
+      "created_at": "2026-05-07T18:56:20.817Z",
+      "updated_at": "2026-05-07T18:56:20.817Z",
+      "telephone_principal": "",
+      "canal_reponse_prefere": "",
+      "consentement_whatsapp": 1,
+      "consentement_email": 0,
+      "consentement_sms": 0,
+      "statut_contact": "actif"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Bons Voisins",
+      "category": "programme"
+    },
+    {
+      "id": 2,
+      "name": "Fidélité",
+      "category": "programme"
+    },
+    {
+      "id": 3,
+      "name": "Fidélité restaurant",
+      "category": "programme"
+    },
+    {
+      "id": 4,
+      "name": "Fidélité brunch",
+      "category": "programme"
+    },
+    {
+      "id": 5,
+      "name": "Fidélité piscine",
+      "category": "programme"
+    },
+    {
+      "id": 6,
+      "name": "Client hôtel",
+      "category": "interet"
+    },
+    {
+      "id": 7,
+      "name": "Client événementiel",
+      "category": "interet"
+    },
+    {
+      "id": 8,
+      "name": "Entreprise",
+      "category": "interet"
+    },
+    {
+      "id": 9,
+      "name": "Plat du jour",
+      "category": "interet"
+    },
+    {
+      "id": 10,
+      "name": "Menu des voisins",
+      "category": "interet"
+    },
+    {
+      "id": 11,
+      "name": "Restaurant",
+      "category": "interet"
+    },
+    {
+      "id": 12,
+      "name": "Take-away",
+      "category": "interet"
+    },
+    {
+      "id": 13,
+      "name": "Pizza",
+      "category": "interet"
+    },
+    {
+      "id": 14,
+      "name": "Goûter",
+      "category": "interet"
+    },
+    {
+      "id": 15,
+      "name": "Brunch",
+      "category": "interet"
+    },
+    {
+      "id": 16,
+      "name": "Piscine",
+      "category": "interet"
+    },
+    {
+      "id": 17,
+      "name": "Moments conviviaux",
+      "category": "interet"
+    },
+    {
+      "id": 18,
+      "name": "Événements spéciaux",
+      "category": "interet"
+    },
+    {
+      "id": 19,
+      "name": "Anniversaire enfant",
+      "category": "interet"
+    },
+    {
+      "id": 20,
+      "name": "Anniversaire adulte",
+      "category": "interet"
+    },
+    {
+      "id": 21,
+      "name": "Chambres",
+      "category": "interet"
+    },
+    {
+      "id": 22,
+      "name": "Salles de séminaire",
+      "category": "interet"
+    },
+    {
+      "id": 23,
+      "name": "Salles de réception",
+      "category": "interet"
+    },
+    {
+      "id": 24,
+      "name": "Offres entreprises",
+      "category": "interet"
+    },
+    {
+      "id": 25,
+      "name": "Toutes les offres",
+      "category": "interet"
+    },
+    {
+      "id": 26,
+      "name": "À relancer",
+      "category": "statut_commercial"
+    },
+    {
+      "id": 27,
+      "name": "Prospect chaud",
+      "category": "statut_commercial"
+    },
+    {
+      "id": 28,
+      "name": "VIP",
+      "category": "gestion"
+    },
+    {
+      "id": 29,
+      "name": "Ne plus contacter",
+      "category": "gestion"
+    },
+    {
+      "id": 30,
+      "name": "Doublon",
+      "category": "gestion"
+    },
+    {
+      "id": 31,
+      "name": "À vérifier",
+      "category": "gestion"
+    },
+    {
+      "id": 32,
+      "name": "brunch",
+      "category": "interet"
+    },
+    {
+      "id": 33,
+      "name": "Nouveau",
+      "category": "statut_commercial"
+    },
+    {
+      "id": 34,
+      "name": "Contacté",
+      "category": "statut_commercial"
+    },
+    {
+      "id": 35,
+      "name": "Réservation confirmée",
+      "category": "statut_commercial"
+    },
+    {
+      "id": 36,
+      "name": "Sans suite",
+      "category": "statut_commercial"
+    },
+    {
+      "id": 37,
+      "name": "Client venu",
+      "category": "statut_commercial"
+    }
+  ],
+  "contact_tags": [
+    {
+      "contact_id": 1,
+      "tag_id": 1,
+      "created_at": "2026-05-07T18:29:16.963Z"
+    },
+    {
+      "contact_id": 1,
+      "tag_id": 13,
+      "created_at": "2026-05-07T18:29:16.963Z"
+    },
+    {
+      "contact_id": 1,
+      "tag_id": 9,
+      "created_at": "2026-05-07T18:29:16.964Z"
+    },
+    {
+      "contact_id": 1,
+      "tag_id": 16,
+      "created_at": "2026-05-07T18:29:16.964Z"
+    },
+    {
+      "contact_id": 2,
+      "tag_id": 2,
+      "created_at": "2026-05-07T18:31:22.673Z"
+    },
+    {
+      "contact_id": 2,
+      "tag_id": 12,
+      "created_at": "2026-05-07T18:31:22.673Z"
+    },
+    {
+      "contact_id": 2,
+      "tag_id": 13,
+      "created_at": "2026-05-07T18:31:22.673Z"
+    },
+    {
+      "contact_id": 2,
+      "tag_id": 11,
+      "created_at": "2026-05-07T18:31:22.673Z"
+    },
+    {
+      "contact_id": 3,
+      "tag_id": 1,
+      "created_at": "2026-05-07T18:33:17.159Z"
+    },
+    {
+      "contact_id": 3,
+      "tag_id": 2,
+      "created_at": "2026-05-07T18:33:17.159Z"
+    },
+    {
+      "contact_id": 3,
+      "tag_id": 32,
+      "created_at": "2026-05-07T18:33:17.160Z"
+    },
+    {
+      "contact_id": 3,
+      "tag_id": 25,
+      "created_at": "2026-05-07T18:33:17.160Z"
+    },
+    {
+      "contact_id": 4,
+      "tag_id": 1,
+      "created_at": "2026-05-07T18:53:14.261Z"
+    },
+    {
+      "contact_id": 4,
+      "tag_id": 2,
+      "created_at": "2026-05-07T18:53:14.261Z"
+    },
+    {
+      "contact_id": 5,
+      "tag_id": 2,
+      "created_at": "2026-05-07T18:54:22.934Z"
+    },
+    {
+      "contact_id": 6,
+      "tag_id": 1,
+      "created_at": "2026-05-07T18:56:20.822Z"
+    }
+  ],
+  "consent_logs": [
+    {
+      "id": 1,
+      "contact_id": 1,
+      "consentement_actif": 1,
+      "texte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "source": "bons-voisins",
+      "created_at": "2026-05-07T18:29:16.959Z"
+    },
+    {
+      "id": 2,
+      "contact_id": 2,
+      "consentement_actif": 1,
+      "texte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "source": "fidelite",
+      "created_at": "2026-05-07T18:31:22.665Z"
+    },
+    {
+      "id": 3,
+      "contact_id": 3,
+      "consentement_actif": 1,
+      "texte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "source": "demande",
+      "created_at": "2026-05-07T18:39:20.269Z"
+    },
+    {
+      "id": 4,
+      "contact_id": 3,
+      "consentement_actif": 1,
+      "texte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "source": "demande",
+      "created_at": "2026-05-07T18:51:35.524Z"
+    },
+    {
+      "id": 5,
+      "contact_id": 4,
+      "consentement_actif": 1,
+      "texte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "source": "demande",
+      "created_at": "2026-05-07T18:53:14.253Z"
+    },
+    {
+      "id": 6,
+      "contact_id": 5,
+      "consentement_actif": 1,
+      "texte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "source": "demande",
+      "created_at": "2026-05-07T18:54:22.929Z"
+    },
+    {
+      "id": 7,
+      "contact_id": 6,
+      "consentement_actif": 1,
+      "texte": "J’accepte de recevoir les informations et offres de La Résidence par WhatsApp et/ou e-mail selon mes centres d’intérêt. Je peux demander à ne plus recevoir ces messages à tout moment en envoyant STOP par WhatsApp ou en le signalant à la réception.",
+      "source": "demande",
+      "created_at": "2026-05-07T18:56:20.817Z"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "contact_id": 3,
+      "source_formulaire": "demande",
+      "campagne": "",
+      "type_demande": "brunch",
+      "payload_json": {
+        "offres": [
+          "bons_voisins",
+          "fidelite",
+          "toutes",
+          "activite"
+        ],
+        "date_souhaitee": "2026-05-24",
+        "nombre_personnes": "4",
+        "nombre_enfants": "0",
+        "message_precision": "est-ce que la piscine est comprise dans le tarif ?",
+        "type_demande_label": "brunch"
+      },
+      "created_at": "2026-05-07T18:39:20.279Z"
+    },
+    {
+      "id": 2,
+      "contact_id": 3,
+      "source_formulaire": "demande",
+      "campagne": "",
+      "type_demande": "brunch",
+      "payload_json": {
+        "offres": [
+          "fidelite",
+          "activite",
+          "toutes",
+          "bons_voisins"
+        ],
+        "date_souhaitee": "2026-05-24",
+        "brunch_date_precision": "",
+        "nombre_adultes": "2",
+        "nombre_enfants": "0",
+        "message_precision": "rien",
+        "total_personnes": 2,
+        "date_souhaitee_label": "Dimanche 24 mai 2026",
+        "type_demande_label": "brunch"
+      },
+      "created_at": "2026-05-07T18:51:35.535Z"
+    },
+    {
+      "id": 3,
+      "contact_id": 4,
+      "source_formulaire": "demande",
+      "campagne": "",
+      "type_demande": "piscine",
+      "payload_json": {
+        "offres": [
+          "bons_voisins",
+          "fidelite"
+        ],
+        "date_souhaitee": "2026-05-16",
+        "nombre_adultes": "10",
+        "nombre_enfants": "5",
+        "message_precision": "on veut faire un picnic - on emmène des repas et des boissons - on commandera des pizzas - combien ça va coûter ?",
+        "total_personnes": 15,
+        "type_demande_label": "piscine"
+      },
+      "created_at": "2026-05-07T18:53:14.283Z"
+    },
+    {
+      "id": 4,
+      "contact_id": 5,
+      "source_formulaire": "demande",
+      "campagne": "",
+      "type_demande": "anniversaire",
+      "payload_json": {
+        "offres": [
+          "fidelite"
+        ],
+        "date_souhaitee": "2026-06-07",
+        "nombre_adultes": "4",
+        "nombre_enfants": "20",
+        "message_precision": "vos offres svp",
+        "total_personnes": 24,
+        "type_demande_label": "anniversaire"
+      },
+      "created_at": "2026-05-07T18:54:22.942Z"
+    },
+    {
+      "id": 5,
+      "contact_id": 6,
+      "source_formulaire": "demande",
+      "campagne": "",
+      "type_demande": "brunch",
+      "payload_json": {
+        "offres": [
+          "bons_voisins"
+        ],
+        "date_souhaitee": "2026-05-17",
+        "brunch_date_precision": "",
+        "nombre_adultes": "5",
+        "nombre_enfants": "0",
+        "total_personnes": 5,
+        "date_souhaitee_label": "Dimanche 17 mai 2026",
+        "type_demande_label": "brunch"
+      },
+      "created_at": "2026-05-07T18:56:20.848Z"
+    }
+  ],
+  "loyalty_accounts": [
+    {
+      "id": 1,
+      "contact_id": 2,
+      "passages_cycle": 0,
+      "cadeaux_disponibles": 0,
+      "cadeaux_remis": 0,
+      "dernier_passage": "",
+      "montant_cycle_actuel": 0,
+      "montant_cumule_total": 0,
+      "palier_super_bonus": 1500000,
+      "super_bonus_disponibles": 0,
+      "super_bonus_remis": 0,
+      "created_at": "2026-05-07T18:31:22.681Z",
+      "updated_at": "2026-05-07T18:31:22.681Z"
+    },
+    {
+      "id": 2,
+      "contact_id": 3,
+      "passages_cycle": 0,
+      "cadeaux_disponibles": 0,
+      "cadeaux_remis": 0,
+      "dernier_passage": "",
+      "montant_cycle_actuel": 0,
+      "montant_cumule_total": 0,
+      "palier_super_bonus": 1500000,
+      "super_bonus_disponibles": 0,
+      "super_bonus_remis": 0,
+      "created_at": "2026-05-07T18:33:17.163Z",
+      "updated_at": "2026-05-07T18:33:17.163Z"
+    },
+    {
+      "id": 3,
+      "contact_id": 4,
+      "passages_cycle": 0,
+      "cadeaux_disponibles": 0,
+      "cadeaux_remis": 0,
+      "dernier_passage": "",
+      "montant_cycle_actuel": 0,
+      "montant_cumule_total": 0,
+      "palier_super_bonus": 1500000,
+      "super_bonus_disponibles": 0,
+      "super_bonus_remis": 0,
+      "created_at": "2026-05-07T18:53:14.270Z",
+      "updated_at": "2026-05-07T18:53:14.270Z"
+    },
+    {
+      "id": 4,
+      "contact_id": 5,
+      "passages_cycle": 0,
+      "cadeaux_disponibles": 0,
+      "cadeaux_remis": 0,
+      "dernier_passage": "",
+      "montant_cycle_actuel": 0,
+      "montant_cumule_total": 0,
+      "palier_super_bonus": 1500000,
+      "super_bonus_disponibles": 0,
+      "super_bonus_remis": 0,
+      "created_at": "2026-05-07T18:54:22.936Z",
+      "updated_at": "2026-05-07T18:54:22.936Z"
+    }
+  ],
+  "loyalty_transactions": [],
+  "offers": [
+    {
+      "id": 1,
+      "nom_offre": "Offre de bienvenue Bons Voisins",
+      "categorie": "Bons Voisins",
+      "description": "1 café ou thé offert avec son biscuit maison lors de la prochaine visite.",
+      "date_debut": "",
+      "date_fin": "",
+      "jours_horaires": "",
+      "public_cible": "",
+      "statut": "active",
+      "notes": "",
+      "created_at": "2026-05-07T18:09:31.444Z",
+      "updated_at": "2026-05-07T18:09:31.444Z"
+    },
+    {
+      "id": 2,
+      "nom_offre": "Plat du Jour des Voisins",
+      "categorie": "Restaurant",
+      "description": "Offre quartier autour du plat du jour.",
+      "date_debut": "",
+      "date_fin": "",
+      "jours_horaires": "",
+      "public_cible": "",
+      "statut": "brouillon",
+      "notes": "",
+      "created_at": "2026-05-07T18:09:31.444Z",
+      "updated_at": "2026-05-07T18:09:31.444Z"
+    },
+    {
+      "id": 3,
+      "nom_offre": "Menu des Voisins",
+      "categorie": "Restaurant",
+      "description": "Menu dédié aux voisins de La Résidence.",
+      "date_debut": "",
+      "date_fin": "",
+      "jours_horaires": "",
+      "public_cible": "",
+      "statut": "brouillon",
+      "notes": "",
+      "created_at": "2026-05-07T18:09:31.444Z",
+      "updated_at": "2026-05-07T18:09:31.444Z"
+    }
+  ]
+}

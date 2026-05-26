@@ -1,7 +1,3 @@
 node_modules
 .npm-cache
-data/*.sqlite
-data/*.json
-data/*.json.tmp
-data/*.json.bak
 .env
