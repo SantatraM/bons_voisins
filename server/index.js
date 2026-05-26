@@ -106,7 +106,8 @@ app.post('/api/auth/login', async (req, res) => {
     return res.status(401).json({ message: 'Email ou mot de passe incorrect.' });
   }
   const safeUser = { id: user.id, name: user.name, email: user.email, role: user.role };
-  const token = jwt.sign(safeUser, JWT_SECRET, { expiresIn: '12h' });
+  // const token = jwt.sign(safeUser, JWT_SECRET, { expiresIn: '12h' });
+  const token = jwt.sign(safeUser, JWT_SECRET, { expiresIn: '1m' });
   res.json({ token, user: safeUser });
 });
 

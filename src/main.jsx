@@ -123,8 +123,24 @@ function parseCsv(text) {
   return rows.map((values) => Object.fromEntries(headers.map((header, index) => [header, values[index] || ''])));
 }
 
+// function api(path, options = {}) {
+//   const token = localStorage.getItem('lr_token');
+//   return fetch(`${API}${path}`, {
+//     ...options,
+//     headers: {
+//       'Content-Type': 'application/json',
+//       ...(token ? { Authorization: `Bearer ${token}` } : {}),
+//       ...(options.headers || {})
+//     }
+//   }).then(async (res) => {
+//     if (!res.ok) throw new Error((await res.json().catch(() => ({}))).message || 'Une erreur est survenue.');
+//     return res.headers.get('content-type')?.includes('application/json') ? res.json() : res.text();
+//   });
+// }
+
 function api(path, options = {}) {
   const token = localStorage.getItem('lr_token');
+
   return fetch(`${API}${path}`, {
     ...options,
     headers: {
@@ -133,8 +149,20 @@ function api(path, options = {}) {
       ...(options.headers || {})
     }
   }).then(async (res) => {
-    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).message || 'Une erreur est survenue.');
-    return res.headers.get('content-type')?.includes('application/json') ? res.json() : res.text();
+    if (res.status === 401) {
+      localStorage.removeItem('lr_token');
+      localStorage.removeItem('lr_user');
+      window.location.href = '/admin/login';
+      return;
+    }
+
+    if (!res.ok) {
+      throw new Error((await res.json().catch(() => ({}))).message || 'Une erreur est survenue.');
+    }
+
+    return res.headers.get('content-type')?.includes('application/json')
+      ? res.json()
+      : res.text();
   });
 }
 
