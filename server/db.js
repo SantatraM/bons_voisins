@@ -639,39 +639,60 @@ export async function dashboardStats() {
   };
 }
 
+// export async function listContacts(filters = {}) {
+//   await ensureReady();
+//   let rows = state.contacts.map(publicContact);
+//   if (filters.q) {
+//     const q = filters.q.toLowerCase();
+//     rows = rows.filter((contact) => [contact.nom_prenom, contact.whatsapp, contact.quartier_ou_lieu_travail].some((value) => String(value || '').toLowerCase().includes(q)));
+//   }
+//   if (filters.source) rows = rows.filter((contact) => contact.source_formulaire === filters.source);
+//   if (filters.quartier) rows = rows.filter((contact) => contact.quartier_ou_lieu_travail === filters.quartier);
+//   if (filters.statut) rows = rows.filter((contact) => contact.statut === filters.statut);
+//   if (filters.tranche_age) rows = rows.filter((contact) => contact.tranche_age === filters.tranche_age);
+//   if (filters.situation) rows = rows.filter((contact) => contact.situation_professionnelle === filters.situation);
+//   if (filters.habitudes) rows = rows.filter((contact) => contact.habitudes_sortie === filters.habitudes);
+//   if (filters.consentement) rows = rows.filter((contact) => Boolean(contact.consentement_actif) === (filters.consentement === 'oui'));
+//   if (filters.tag) rows = rows.filter((contact) => contact.tags.some((tag) => tag.name === filters.tag));
+//   if (filters.interet) rows = rows.filter((contact) => contact.tags.some((tag) => tag.category === 'interet' && tag.name === filters.interet));
+//   if (filters.programme) rows = rows.filter((contact) => contact.tags.some((tag) => tag.category === 'programme' && tag.name === filters.programme));
+//   if (filters.statut_commercial) rows = rows.filter((contact) => contact.tags.some((tag) => tag.category === 'statut_commercial' && tag.name === filters.statut_commercial));
+//   if (filters.preference_creneau) rows = rows.filter((contact) => contact.moments_conviviaux_slot === filters.preference_creneau);
+//   if (filters.cadeau === 'oui') rows = rows.filter((contact) => (contact.loyalty?.cadeaux_disponibles || 0) > 0);
+//   if (filters.super_bonus === 'oui') rows = rows.filter((contact) => (contact.loyalty?.super_bonus_disponibles || 0) > 0);
+//   return rows
+//     .sort((a, b) => b.created_at.localeCompare(a.created_at))
+//     .slice(0, 300)
+//     .map((contact) => ({
+//       ...contact,
+//       tags: contact.tags.map((tag) => tag.name),
+//       tags_detail: contact.tags,
+//       passages_cycle: contact.loyalty?.passages_cycle || 0,
+//       montant_cumule_total: contact.loyalty?.montant_cumule_total || 0,
+//       cadeaux_disponibles: contact.loyalty?.cadeaux_disponibles || 0,
+//       super_bonus_disponibles: contact.loyalty?.super_bonus_disponibles || 0
+//     }));
+// }
+
 export async function listContacts(filters = {}) {
   await ensureReady();
-  let rows = state.contacts.map(publicContact);
-  if (filters.q) {
-    const q = filters.q.toLowerCase();
-    rows = rows.filter((contact) => [contact.nom_prenom, contact.whatsapp, contact.quartier_ou_lieu_travail].some((value) => String(value || '').toLowerCase().includes(q)));
-  }
-  if (filters.source) rows = rows.filter((contact) => contact.source_formulaire === filters.source);
-  if (filters.quartier) rows = rows.filter((contact) => contact.quartier_ou_lieu_travail === filters.quartier);
-  if (filters.statut) rows = rows.filter((contact) => contact.statut === filters.statut);
-  if (filters.tranche_age) rows = rows.filter((contact) => contact.tranche_age === filters.tranche_age);
-  if (filters.situation) rows = rows.filter((contact) => contact.situation_professionnelle === filters.situation);
-  if (filters.habitudes) rows = rows.filter((contact) => contact.habitudes_sortie === filters.habitudes);
-  if (filters.consentement) rows = rows.filter((contact) => Boolean(contact.consentement_actif) === (filters.consentement === 'oui'));
-  if (filters.tag) rows = rows.filter((contact) => contact.tags.some((tag) => tag.name === filters.tag));
-  if (filters.interet) rows = rows.filter((contact) => contact.tags.some((tag) => tag.category === 'interet' && tag.name === filters.interet));
-  if (filters.programme) rows = rows.filter((contact) => contact.tags.some((tag) => tag.category === 'programme' && tag.name === filters.programme));
-  if (filters.statut_commercial) rows = rows.filter((contact) => contact.tags.some((tag) => tag.category === 'statut_commercial' && tag.name === filters.statut_commercial));
-  if (filters.preference_creneau) rows = rows.filter((contact) => contact.moments_conviviaux_slot === filters.preference_creneau);
-  if (filters.cadeau === 'oui') rows = rows.filter((contact) => (contact.loyalty?.cadeaux_disponibles || 0) > 0);
-  if (filters.super_bonus === 'oui') rows = rows.filter((contact) => (contact.loyalty?.super_bonus_disponibles || 0) > 0);
-  return rows
-    .sort((a, b) => b.created_at.localeCompare(a.created_at))
-    .slice(0, 300)
-    .map((contact) => ({
-      ...contact,
-      tags: contact.tags.map((tag) => tag.name),
-      tags_detail: contact.tags,
-      passages_cycle: contact.loyalty?.passages_cycle || 0,
-      montant_cumule_total: contact.loyalty?.montant_cumule_total || 0,
-      cadeaux_disponibles: contact.loyalty?.cadeaux_disponibles || 0,
-      super_bonus_disponibles: contact.loyalty?.super_bonus_disponibles || 0
-    }));
+
+  const result = await pool.query(`
+    SELECT * FROM contacts
+    ORDER BY created_at DESC
+  `);
+
+  let rows = result.rows.map(publicContact);
+
+  return rows.map((contact) => ({
+    ...contact,
+    tags: contact.tags.map((tag) => tag.name),
+    tags_detail: contact.tags,
+    passages_cycle: contact.loyalty?.passages_cycle || 0,
+    montant_cumule_total: contact.loyalty?.montant_cumule_total || 0,
+    cadeaux_disponibles: contact.loyalty?.cadeaux_disponibles || 0,
+    super_bonus_disponibles: contact.loyalty?.super_bonus_disponibles || 0
+  }));
 }
 
 export async function unsubscribeContact(id, mode) {
