@@ -1,6 +1,5 @@
 node_modules
 .npm-cache
-dist
 data/*.sqlite
 data/*.json
 data/*.json.tmp
